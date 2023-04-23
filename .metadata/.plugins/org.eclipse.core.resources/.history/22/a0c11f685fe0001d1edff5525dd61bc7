@@ -1,0 +1,97 @@
+package fr.doranco.exemple.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+import fr.doranco.exemple.entity.Commande;
+import fr.doranco.exemple.model.connection.DataBaseConnection;
+import fr.doranco.exemple.utils.Dates;
+
+
+public class CommandeDao implements ICommandeDao{
+
+	
+	@Override
+	public int addCommande(Commande commande, int userId, int adresseLivraisonId, int adresseFacturationId, int cartePaiementId) throws Exception {
+		
+		Connection connection = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			connection = DataBaseConnection.getConnection();
+			String requete = "INSERT INTO commande ("
+					+ "numero_commande, "
+					+ "statut,"
+					+ "mode_livraison,"
+					+ "date_creation,"
+					+ "date_livraison,"
+					+ "date_annulation)"
+					+ "adresse_livraison_id,"
+					+ "adresse_facturation_id,"
+					+ "carte_paiement_id,"
+					+ "user_id, "
+					+ "VALUES(?,?,?,?,?,?,?,?,?,?)";
+			ps = connection.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);				
+			ps.setInt(1, commande.getNumeroCommande());
+			ps.setString(2, commande.getStatut());
+			ps.setString(3, commande.getModeLivraison());
+			ps.setDate(4, Dates.convertDateUtilToSql(commande.getDateCreation()));
+			ps.setDate(5, Dates.convertDateUtilToSql(commande.getDateLivraison()));
+			ps.setDate(6, Dates.convertDateUtilToSql(commande.getDateAnnulation()));
+			ps.setInt(7, adresseLivraison);
+			ps.setInt(8, adresseFacturation);
+			ps.setInt(9, cartePaiementId);
+			ps.setInt(10, userId);
+			
+			ps.executeUpdate();
+			rs = ps.getGeneratedKeys();
+			int id = -1;
+			if (rs != null && rs.next()) {
+			    id = rs.getInt(1);
+			    return id;
+			}
+		
+
+			
+			
+			
+			
+		} finally {
+			if (rs != null && !rs.isClosed()) {
+				rs.close();
+			}
+			if (ps != null && !ps.isClosed()) {
+				ps.close();
+			}
+			if (connection != null && !connection.isClosed()) {
+				connection.close();
+			}
+		}
+		return -1;
+	}
+
+	@Override
+	public Commande getCommandeById(int id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public void annulerCommande(Commande commande) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Commande> getCommandes(int userId) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

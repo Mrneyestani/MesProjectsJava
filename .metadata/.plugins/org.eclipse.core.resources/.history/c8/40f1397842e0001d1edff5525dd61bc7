@@ -1,0 +1,5 @@
+package fr.doranco.exemple.model.dao;
+
+public enum EtatCommandeEnum {
+
+}

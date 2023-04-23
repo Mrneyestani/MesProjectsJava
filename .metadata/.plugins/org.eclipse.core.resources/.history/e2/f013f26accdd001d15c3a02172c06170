@@ -1,0 +1,38 @@
+package fr.doranco.tp7;
+
+import java.util.List;
+
+public abstract class Employe implements List<Employe> {
+
+	protected String nom;
+	protected String prenom;
+	protected int age;
+	protected String dateEntree;
+	
+	public Employe() {
+		
+	}
+
+	public Employe(String prenom, String nom, int age, String dateEntree) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+		this.dateEntree = dateEntree;
+	}
+	
+	public abstract double calculerSalaire();
+	
+
+	public String getNomPrenom() {
+		return "\n\t"+ prenom + " " + nom ;
+	}
+
+	@Override
+	public String toString() {
+		return "Employe [nom=" + nom + ", prenom=" + prenom + "]";
+	}
+	
+	
+
+}

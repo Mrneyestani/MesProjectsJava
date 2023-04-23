@@ -1,0 +1,9 @@
+package fr.doranco.tp7;
+
+public class TechnARisque {
+
+	public TechnARisque() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

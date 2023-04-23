@@ -1,0 +1,34 @@
+package fr.doranco.exemple.main.cartePaiement;
+
+import fr.doranco.exemple.entity.CartePaiement;
+import fr.doranco.exemple.entity.User;
+import fr.doranco.exemple.model.dao.CarteDao;
+import fr.doranco.exemple.model.dao.ICartePaiementDao;
+import fr.doranco.exemple.model.dao.IUserDao;
+import fr.doranco.exemple.model.dao.UserDao;
+import fr.doranco.exemple.utils.Dates;
+
+public class MainGetCarte {
+
+
+	public static void main(String[] args) {
+		
+		try {
+			final ICartePaiementDao cartePaiementDao = new CarteDao();
+			int id = 5;
+			IUserDao userDao = new UserDao();
+			cartePaiementDao.getCartePaiement(id);
+//			User user = userDao.getUserById(id);
+			System.out.println("Récupération de la Carte numéro : "+id);
+			
+			CartePaiement c = cartePaiementDao.getCartePaiement(3);
+			System.out.println(c);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+package fr.doranco.exemple.main.commande;
+
+import java.util.List;
+
+import fr.doranco.exemple.entity.Adresse;
+import fr.doranco.exemple.entity.Commande;
+import fr.doranco.exemple.model.dao.CommandeDao;
+import fr.doranco.exemple.model.dao.ICommandeDao;
+
+public class MainGetCommande {
+
+
+	public static void main(String[] args) {
+	
+		try {
+			final ICommandeDao commandeDao = new CommandeDao();
+			
+			System.out.println("Récupération d'une commande :");
+			Commande c = commandeDao.getCommandeById(3);
+			System.out.println(c);
+			
+			System.out.println("==============================");
+			
+			System.out.println("Récupération de toutes les commandes :");
+			List<Commande> commandes = commandeDao.getCommandes(4);
+			for (Commande cds : commandes) {
+				System.out.println("  -> " + cds);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

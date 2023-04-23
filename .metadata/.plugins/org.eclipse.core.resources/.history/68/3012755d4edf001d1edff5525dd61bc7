@@ -1,0 +1,14 @@
+package fr.doranco.exemple.main.adresse;
+
+public class MainAdd {
+
+	public MainAdd() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

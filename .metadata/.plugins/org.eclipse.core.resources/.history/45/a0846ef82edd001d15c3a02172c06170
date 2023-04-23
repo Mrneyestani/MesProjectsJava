@@ -1,0 +1,9 @@
+package fr.doranco.tp7;
+
+public class ManutARisque {
+
+	public ManutARisque() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

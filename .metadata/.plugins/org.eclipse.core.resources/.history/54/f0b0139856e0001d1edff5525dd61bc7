@@ -1,0 +1,36 @@
+package fr.doranco.exemple.model.dao;
+
+import java.util.List;
+import fr.doranco.exemple.entity.Commande;
+
+
+public class CommandeDao implements ICommandeDao{
+
+	
+	@Override
+	public int addCommande(Commande commande) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Commande getCommandeById(int id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Commande> getCommandes() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void annulerCommande(Commande commande) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+}

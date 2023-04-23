@@ -1,0 +1,32 @@
+package fr.doranco.exemple.main.commande;
+
+import java.util.List;
+
+import fr.doranco.exemple.entity.Adresse;
+import fr.doranco.exemple.entity.Commande;
+import fr.doranco.exemple.enums.EtatCommandeEnum;
+import fr.doranco.exemple.model.dao.CommandeDao;
+import fr.doranco.exemple.model.dao.ICommandeDao;
+import fr.doranco.exemple.utils.Dates;
+
+public class MainUpdateCommande {
+
+
+	public static void main(String[] args) {
+	
+		try {
+			final ICommandeDao commandeDao = new CommandeDao();
+			int commandId = 4;
+			Commande commande = commandeDao.getCommandeById(commandId);
+			System.out.println("Mas à jour le statut et la date de Livraison de la commande n°"+commandId+" : ");
+			commande.setStatut(EtatCommandeEnum.ENCOURS.getValue());
+			commande.setDateLivraison(Dates.convertStringToDate("05/05/2023"));
+			commandeDao.updateCommande(commande);
+			System.out.println("Commande n°"+commandId+ " est annulée.");
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

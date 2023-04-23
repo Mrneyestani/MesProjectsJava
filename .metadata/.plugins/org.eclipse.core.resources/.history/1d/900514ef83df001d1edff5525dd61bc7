@@ -1,0 +1,14 @@
+package fr.doranco.exemple.entity;
+
+public class CartePaiement {
+
+	private int id;
+	private int numeroCarte;
+	private 
+	private int cryptogramme;
+	
+	public CartePaiement() {
+		
+	}
+
+}

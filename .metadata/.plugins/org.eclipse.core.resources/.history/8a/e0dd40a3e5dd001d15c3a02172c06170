@@ -1,0 +1,31 @@
+package fr.doranco.tp7;
+
+
+public class Manutentionnaire extends Employe{
+
+	protected int heures;
+	
+	
+
+	public Manutentionnaire(String nom, String prenom, int age, String dateEntree,int heures) {
+		super(nom, prenom, age, dateEntree);
+		this.heures = heures;
+	}
+
+
+
+	@Override
+	public double calculerSalaire() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+	@Override
+	protected double salaireMoyen() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

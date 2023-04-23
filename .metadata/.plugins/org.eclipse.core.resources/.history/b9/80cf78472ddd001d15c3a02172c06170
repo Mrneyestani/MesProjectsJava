@@ -1,0 +1,9 @@
+package fr.doranco.tp7;
+
+public class Vendeur {
+
+	public Vendeur() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

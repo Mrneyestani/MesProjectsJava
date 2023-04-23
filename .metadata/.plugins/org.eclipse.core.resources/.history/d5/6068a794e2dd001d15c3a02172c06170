@@ -1,0 +1,16 @@
+package fr.doranco.tp7;
+
+import java.util.*;
+
+public class Manutentionnaire extends Employe{
+
+	protected int heures;
+	
+	
+
+	public Manutentionnaire(String nom, String prenom, int age, String dateEntree,int heures) {
+		super(nom, prenom, age, dateEntree);
+		this.heures = heures;
+	}
+
+}

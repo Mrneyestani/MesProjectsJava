@@ -1,0 +1,9 @@
+package fr.doranco.exemple.main.adresse;
+
+public class MainDelete {
+
+	public MainDelete() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

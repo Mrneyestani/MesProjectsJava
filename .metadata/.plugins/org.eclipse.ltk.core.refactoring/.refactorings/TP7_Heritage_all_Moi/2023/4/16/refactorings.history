@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;fr.doranco.tp7.Employe.getNom()&apos; to &apos;getNomPrenom&apos;&#x0D;&#x0A;- Original project: &apos;TP7&apos;&#x0D;&#x0A;- Original element: &apos;fr.doranco.tp7.Employe.getNom()&apos;&#x0D;&#x0A;- Renamed element: &apos;fr.doranco.tp7.Employe.getNomPrenom()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;getNom&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java&lt;fr.doranco.tp7{Employe.java[Employe~getNom" name="getNomPrenom" references="true" stamp="1681808982569" version="1.0"/>
+</session>

@@ -1,0 +1,34 @@
+TP Ecommerce
+
+pour la suite du TP, une fois les fonctionnalités autour de la carte de paiement développées, 
+il faudra faire de même avec la commande.
+Voici les éléments nécessaires pour développer les fonctionnalités autour de l'objet métier commande
+créer une entité appellée Commande avec les paramètres suivants :
+id, numéro, date de création, date de livraison, date d'annulation, mode de livraison, adresse de facturation,
+ adresse de livraison, carte de paiement utilisée, statut. 
+(le statut ne doit accepter que 3 valeurs possibles qui sont : validée, en cours, annulée) 
+créer un paramètre de type liste de commandes dans l'entité User avec son getter et ne pas oublier 
+de l'initialiser dans le constructeur
+créer une énumération appelée EtatCommandeEnum qui contiendra les 3 valeurs possibles précédentes 
+du statut d'une commande, à savoir : validée, en cours, annulée (vous mettez la classe EtatCommandeEnum 
+dans un nouveau package  nommé : fr.doranco.exemple.enums)
+ 
+Ryadh — Aujourd’hui à 12:03
+créer une interface ICommandeDao qui contiendra les fonctionnalités suivantes :
+-- récupérer une commande à partir de son id 
+-- récupérer la liste de toutes les commandes d'un utilisateur (uniquement les commandes qui sont validées 
+ou en cours)
+-- ajouter une nouvelle commande
+-- annuler une commande (l'annulation ne consiste pas en la suppression, mais en une mise à jour du statut de 
+la commande avec la valeur "annulée")
+créer la classe d'implémentation appelée CommandeDao dans laquelle vous implémenterez les 4 fonctionnalités 
+précédentes.
+Ryadh — Aujourd’hui à 12:10
+créez la table commande dans la base de données
+testez les 4 fonctionnalités implémentées dans la DAO
+
+Pour l'adresse de livraison, l'adresse de facturation, ainsi que la carte de paiement, il faut utiliser 
+la user_id ou bien il faut tous les créer dans la table "commande" ?
+Ryadh — Aujourd’hui à 12:24
+Dans la table commande il faut créer 4 colonnes : user_id / adresse_facturation_id / adresse_livraison_id / 
+carte_paiement_id

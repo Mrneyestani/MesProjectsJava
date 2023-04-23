@@ -1,0 +1,9 @@
+package fr.doranco.tp7;
+
+public class Technicien {
+
+	public Technicien() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

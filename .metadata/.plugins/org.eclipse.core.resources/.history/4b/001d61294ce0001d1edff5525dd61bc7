@@ -1,0 +1,20 @@
+package fr.doranco.exemple.entity;
+import java.util.Date;
+public class Commande {
+	
+	private int id; 
+    private int numero_commande;
+    private Date date_livraison;
+    private Date date_creation;
+    private Date date_annulation;
+    private String mode_livraison;
+    private String statut;
+
+	
+	public Commande() {
+		
+	}
+	
+	
+
+}

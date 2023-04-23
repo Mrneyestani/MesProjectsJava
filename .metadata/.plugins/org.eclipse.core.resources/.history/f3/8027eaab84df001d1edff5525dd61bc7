@@ -1,0 +1,17 @@
+package fr.doranco.exemple.entity;
+
+import java.util.Date;
+
+public class CartePaiement {
+
+	private int id;
+	private int numeroCarte;
+	private Date date_validite;
+	private int cryptogramme;
+	
+	
+	public CartePaiement() {
+		
+	}
+
+}

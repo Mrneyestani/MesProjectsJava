@@ -1,0 +1,74 @@
+package fr.doranco.exemple.entity;
+
+import java.util.Date;
+
+public class CartePaiement {
+
+	private int id;
+	private int numeroCarte;
+	private Date date_validite;
+	private int cryptogramme;
+	
+	
+	public CartePaiement() {
+		
+	}
+
+
+	public CartePaiement(int numeroCarte, Date date_validite, int cryptogramme) {
+		
+		this.numeroCarte = numeroCarte;
+		this.date_validite = date_validite;
+		this.cryptogramme = cryptogramme;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public int getNumeroCarte() {
+		return numeroCarte;
+	}
+
+
+	public void setNumeroCarte(int numeroCarte) {
+		this.numeroCarte = numeroCarte;
+	}
+
+
+	public Date getDate_validite() {
+		return date_validite;
+	}
+
+
+	public void setDate_validite(Date date_validite) {
+		this.date_validite = date_validite;
+	}
+
+
+	public int getCryptogramme() {
+		return cryptogramme;
+	}
+
+
+	public void setCryptogramme(int cryptogramme) {
+		this.cryptogramme = cryptogramme;
+	}
+
+
+	@Override
+	public String toString() {
+		return "CartePaiement [id=" + id + ", numeroCarte=" + numeroCarte + ", date_validite=" + date_validite
+				+ ", cryptogramme=" + cryptogramme + "]";
+	}
+
+	
+	
+}

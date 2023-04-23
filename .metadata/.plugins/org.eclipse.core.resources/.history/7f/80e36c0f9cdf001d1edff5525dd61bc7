@@ -1,0 +1,34 @@
+package fr.doranco.exemple.main.cartePaiement;
+
+import fr.doranco.exemple.entity.CartePaiement;
+import fr.doranco.exemple.model.dao.CarteDao;
+import fr.doranco.exemple.model.dao.ICartePaiementDao;
+import fr.doranco.exemple.utils.Dates;
+
+public class MainCarte {
+
+
+	public static void main(String[] args) {
+		
+		try {
+			final ICartePaiementDao cartePaiementDao = new CarteDao();
+			//Metode addCarte
+			CartePaiement cartePaiement1 = new CartePaiement("5041721062014536", Dates.convertStringToDate("25/12/2024"), 978);
+			CartePaiement cartePaiement2 = new CartePaiement("5041721062014536", Dates.convertStringToDate("20/11/2023"), 564);
+			CartePaiement cartePaiement3 = new CartePaiement("5041721062014536", Dates.convertStringToDate("25/01/2025"), 325);
+			
+			int id2 = cartePaiementDao.addCartePaiement(cartePaiement2, 2);
+			cartePaiement2.setId(id2);
+			System.out.println(" CartePaiement ajoutées :");
+			System.out.println(cartePaiement2);
+			//Methode getCart
+			System.out.println("Récupération de la Carte :");
+			CartePaiement c = cartePaiementDao.getCartesPaiement(1);
+			System.out.println(c);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

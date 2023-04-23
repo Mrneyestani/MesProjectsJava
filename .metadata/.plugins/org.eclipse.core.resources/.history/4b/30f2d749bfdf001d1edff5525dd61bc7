@@ -1,0 +1,14 @@
+package fr.doranco.exemple.model.dao;
+
+import fr.doranco.exemple.entity.CartePaiement;
+
+
+public interface ICartePaiementDao {
+
+	int addCartePaiement(CartePaiement cartePaiement, int userId) throws Exception;
+	CartePaiement getCartesPaiement(int id) throws Exception;
+	void removeCartePaiement(int id) throws Exception;
+	void removeCartesPaiement(int userId) throws Exception;
+	
+	
+}

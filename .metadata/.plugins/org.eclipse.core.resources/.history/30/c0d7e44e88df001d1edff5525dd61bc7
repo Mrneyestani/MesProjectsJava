@@ -1,0 +1,14 @@
+package fr.doranco.exemple.model.dao;
+
+public class CarteDao {
+
+	public CarteDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

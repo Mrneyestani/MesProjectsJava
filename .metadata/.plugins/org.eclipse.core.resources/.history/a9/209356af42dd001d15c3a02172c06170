@@ -1,0 +1,23 @@
+package fr.doranco.tp7;
+
+public class Main {
+
+
+	public static void main(String[] args) {
+		
+		Personnel p = new Personnel();
+		p.ajouterEmploye(new Vendeur("Pierre", "Business", 45, "1995", 30000));
+		p.ajouterEmploye(new Representant("Léon", "Vendtout", 25, "2001", 20000));
+		p.ajouterEmploye(new Technicien("Yves", "Bossier", 28, "1998", 1000));
+		p.ajouterEmploye(new Manutentionnaire("Jeanne", "Stocktout", 32, "1998", 45));
+		p.ajouterEmploye(new TechnARisque("Jean", "Flippe", 28, "2000", 1000));
+		p.ajouterEmploye(new ManutARisque("Karim", "Abordage", 30, "2001", 45));
+		
+		System.out.print("   ------------------Les salaires----------------------");
+		p.afficherSalaires();
+		double moyen = p.salaireMoyen();
+		System.out.println("   -----------------Le salaire moyen----------------------");
+		System.out.println("   Le salaire moyen dans l'entreprise est de "+ moyen + " euros.");
+	}
+
+}

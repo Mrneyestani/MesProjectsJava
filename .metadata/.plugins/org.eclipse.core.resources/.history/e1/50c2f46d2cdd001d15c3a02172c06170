@@ -1,0 +1,9 @@
+package fr.doranco.tp7;
+
+public class Commercial {
+
+	public Commercial() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

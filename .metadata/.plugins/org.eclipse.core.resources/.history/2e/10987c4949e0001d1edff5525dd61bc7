@@ -1,7 +1,0 @@
-package fr.doranco.exemple.enums;
-
-public class Snippet {
-	Dans la table commande il faut créer 4 colonnes : user_id / adresse_facturation_id / adresse_livraison_id / 
-	carte_paiement_id
-}
-

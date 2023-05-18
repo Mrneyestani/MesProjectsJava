@@ -1,5 +1,0 @@
-package fr.doranco.exemple.enums;
-
-public enum EtatCommandeEnum {
-
-}

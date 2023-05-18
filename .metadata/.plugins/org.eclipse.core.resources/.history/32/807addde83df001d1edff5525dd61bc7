@@ -1,9 +1,0 @@
-package fr.doranco.exemple.entity;
-
-public class CartePaiement {
-
-	public CartePaiement() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

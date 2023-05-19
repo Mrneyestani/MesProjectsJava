@@ -15,7 +15,7 @@ public class CartePaiementDao implements ICartePaiementDao {
 	public CartePaiement addCartePaiement(CartePaiement cp) throws Exception {
 		
 		if (cp == null) {
-			throw new NullPointerException("L'objet CartePaiement à ajouter dans la BDD ne doit pas être NULL !");
+			throw new NullPointerException("L'objet CartePaiement Ã  ajouter dans la BDD ne doit pas ï¿½tre NULL !");
 		}
 		if (cp.getTitulaire() == null || cp.getTitulaire().isEmpty()
 				|| cp.getNumeroCarte() == null || cp.getNumeroCarte().length == 0
@@ -24,7 +24,7 @@ public class CartePaiementDao implements ICartePaiementDao {
 				|| cp.getUserId() == null || cp.getUserId() <= 0) {
 
 			throw new IllegalArgumentException(
-					"Un ou plusieurs paramètres de la carte de paiement à ajouter dans la BDD est(sont) manquant(s) !");
+					"Un ou plusieurs paramÃ¨tres de la carte de paiement Ã  ajouter dans la BDD est(sont) manquant(s) !");
 		}
 
 		String requete = "INSERT INTO carte_paiement(titulaire, numero, date_validite, crypto, user_id) VALUES(?,?,?,?,?)";
@@ -49,7 +49,7 @@ public class CartePaiementDao implements ICartePaiementDao {
 	public CartePaiement getCartePaiement(Integer idUser) throws Exception {
 		
 		if (idUser == null || idUser <= 0) {
-			throw new NullPointerException("L'id du user doit être non NULL et > 0 !");
+			throw new NullPointerException("L'id du user doit ï¿½tre non NULL et > 0 !");
 		}
 		String requete = "SELECT * FROM carte_paiement WHERE user_id = ?";
 		Connection connection = MySqlDS.getInstance().getConnection();

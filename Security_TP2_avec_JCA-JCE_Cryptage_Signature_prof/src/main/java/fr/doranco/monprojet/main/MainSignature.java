@@ -18,7 +18,7 @@ public class MainSignature {
 
 			byte[] messageSigned = AlgorithmeSignature.sign(SignatureEnum.DSA.getAlgorithme(), messageInBytes, kp);
 			
-			System.out.println("Signature effectuée avec succès.");
+			System.out.println("Signature effectuï¿½e avec succÃ¨s.");
 
 		} catch (Exception e) {
 			e.printStackTrace();

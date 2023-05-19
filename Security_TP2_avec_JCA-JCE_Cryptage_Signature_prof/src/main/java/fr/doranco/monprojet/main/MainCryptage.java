@@ -29,7 +29,7 @@ public class MainCryptage {
 			user.setCleCryptage(key.getEncoded());
 			
 			CartePaiement cp = new CartePaiement();
-			cp.setTitulaire("HUGO Victor");
+			cp.setTitulaire("BLAISE Pascal");
 			cp.setNumeroCarte(AlgorithmeCryptage.encrypt("1234567890123456", key, des));
 			cp.setCryptogramme(AlgorithmeCryptage.encrypt("657", key, des));
 			cp.setDateValidite(Dates.stringToDate("03/06/2024"));
@@ -45,7 +45,7 @@ public class MainCryptage {
 			User u = userDao.getUserByEmail("blaise@gmail.com");
 			
 			System.out.println("==========================================");
-			System.out.println("le user ajouté :");
+			System.out.println("le user ajoutÃ© :");
 			System.out.println(u);
 			System.out.println("  => " + u.getCartePaiement());
 			
@@ -55,7 +55,7 @@ public class MainCryptage {
 			System.out.println("-> mot de passe : " + mdpDecrypte);
 
 			String numeroCarteDecrypte = AlgorithmeCryptage.decrypt(u.getCartePaiement().getNumeroCarte(), userKey, des);
-			System.out.println("-> Numéro de la carte de paiement : " + numeroCarteDecrypte);
+			System.out.println("-> NumÃ©ro de la carte de paiement : " + numeroCarteDecrypte);
 
 			String cryptoDecrypte = AlgorithmeCryptage.decrypt(u.getCartePaiement().getCryptogramme(), userKey, des);
 			System.out.println("-> crypto de la carte de paiement : " + cryptoDecrypte);

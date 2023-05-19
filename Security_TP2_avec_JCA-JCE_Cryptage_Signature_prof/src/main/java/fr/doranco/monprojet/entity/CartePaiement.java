@@ -1,12 +1,7 @@
 package fr.doranco.monprojet.entity;
 
-import java.util.Arrays;
 import java.util.Date;
 
-import javax.crypto.spec.SecretKeySpec;
-
-import fr.doranco.monprojet.cryptage.algo.AlgorithmeCryptage;
-import fr.doranco.monprojet.enums.CryptageEnum;
 import fr.doranco.monprojet.utils.Dates;
 
 public class CartePaiement {

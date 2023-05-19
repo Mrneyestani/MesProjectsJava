@@ -1,13 +1,5 @@
 package fr.doranco.monprojet.entity;
 
-import java.security.Key;
-import java.util.Arrays;
-
-import javax.crypto.spec.SecretKeySpec;
-
-import fr.doranco.monprojet.cryptage.algo.AlgorithmeCryptage;
-import fr.doranco.monprojet.enums.CryptageEnum;
-
 public class User {
 
 	private Integer id;

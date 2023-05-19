@@ -15,7 +15,7 @@ public class UserDao implements IUserDao {
 	public User addUser(User user) throws Exception {
 		
 		if (user == null) {
-			throw new NullPointerException("L'objet user à ajouter dans la BDD ne doit pas être NULL !");
+			throw new NullPointerException("L'objet user ï¿½ ajouter dans la BDD ne doit pas Ãªtre NULL !");
 		}
 		if (user.getNom() == null || user.getNom().isEmpty()
 				|| user.getPrenom() == null || user.getPrenom().isEmpty()
@@ -24,7 +24,7 @@ public class UserDao implements IUserDao {
 				|| user.getCleCryptage() == null || user.getCleCryptage().length == 0) {
 
 			throw new IllegalArgumentException(
-					"Un ou plusieurs paramètres du user à ajouter dans la BDD est(sont) manquant(s) !");
+					"Un ou plusieurs paramï¿½tres du user Ã  ajouter dans la BDD est(sont) manquant(s) !");
 		}
 
 		String requete = "INSERT INTO user(nom, prenom, email, password, cle_cryptage) VALUES(?,?,?,?,?)";
@@ -55,7 +55,7 @@ public class UserDao implements IUserDao {
 	public User getUserByEmail(String email) throws Exception {
 		
 		if (email == null || email.isEmpty()) {
-			throw new NullPointerException("L'email du user doit être non NULL et non vide !");
+			throw new NullPointerException("L'email du user doit Ãªtre non NULL et non vide !");
 		}
 		String requete = "SELECT * FROM user WHERE email = ?";
 		Connection connection = MySqlDS.getInstance().getConnection();

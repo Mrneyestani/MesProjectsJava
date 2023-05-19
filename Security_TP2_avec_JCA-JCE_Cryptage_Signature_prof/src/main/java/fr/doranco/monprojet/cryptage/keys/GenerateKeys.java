@@ -18,7 +18,7 @@ public final class GenerateKeys {
 	public final static KeyPair getKeySignature(String algorithm, int keysize) throws Exception {
 		
 		if (algorithm == null || algorithm.isEmpty()) {
-			throw new IllegalArgumentException("Il faut préciser l'algorithme !");
+			throw new IllegalArgumentException("Il faut prÃ©ciser l'algorithme !");
 		}
 		switch (algorithm) {
 			case "DSA":
@@ -32,7 +32,7 @@ public final class GenerateKeys {
 					throw new IllegalArgumentException("keysize must be a multiple of 64, ranging from 512 to 1024 (inclusive), 2048, or 3072.");
 				}
 			case "RSA":
-				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implémenté !");
+				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implÃ©mentÃ© !");
 			default:
 				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas pris en charge !");
 		}
@@ -42,7 +42,7 @@ public final class GenerateKeys {
 	public final static SecretKey getKeyCryptage(String algorithm, Integer keysize) throws Exception {
 
 		if (algorithm == null || algorithm.isEmpty()) {
-			throw new IllegalArgumentException("Il faut préciser l'algorithme !");
+			throw new IllegalArgumentException("Il faut prÃ©ciser l'algorithme !");
 		}
 		if (keysize == null || keysize <= 0 || keysize%8 != 0) {
 			throw new IllegalArgumentException("Le keysize est incorrect !");
@@ -64,7 +64,7 @@ public final class GenerateKeys {
 				if (!listeKeySize.contains(keysize)) {
 					throw new IllegalArgumentException("Wrong keysize: must be equal to 128, 192 or 256");
 				}
-				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implémenté !");
+				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implÃ©mentÃ© !");
 			default:
 				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas pris en charge !");
 		}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Un formulaire JSF d'inscription JSF</title>
+<!-- Inrégration du fichier CSS dans la page  -->
+
+</h:head>
+<body>
+
+	<ui:composition template="/resources/template/layout.xhtml">
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+						<h3>Formulaire JSF d'inscription <a href="https://www.doranco.fr/candidature/parcours/41?">Ecole DORANCO</a>  </h3>
+						<h:panelGrid id="panel" columns="3" cellpadding="2" cellspacing="1">
+
+							<h:outputLabel value="nom :" />
+							<h:inputText id="nom" required="true" value="#{userbean.nom}"
+									requiredMessage="Le nom est obligatoire !">
+								<f:validateLength minimum="3" maximum="30" ></f:validateLength>
+							</h:inputText>
+							<h:message for="nom" style="color:red"></h:message>
+
+							<h:outputLabel value="prenom :" />
+							<h:inputText id="prenom" required="true" value="#{userbean.prenom}"
+									requiredMessage="Le prenom est obligatoire !">
+								<f:validateLength minimum="3" maximum="30" ></f:validateLength>
+							</h:inputText>
+							<h:message for="prenom" style="color:red"></h:message>
+							
+							<h:outputLabel value="date de naissance : (jj/mm/aaaa)" />
+							<h:inputText id="dateDeNaissance" required="true" value="#{userbean.dateDeNaissance}"
+									requiredMessage="La date De Naissance est obligatoire !">
+								<f:validateLength minimum="6" maximum="30" ></f:validateLength>
+							</h:inputText> 
+							<h:message for="dateDeNaissance" style="color:red" ></h:message>
+							
+							<h:outputLabel value="Sexe :" />
+							<h:selectOneRadio id="genre" required="true" value="#{userbean.genre}"
+									requiredMessage="Le genre est obligatoire !">
+									<f:selectItem itemLabel="Homme" itemValue="homme"/>
+									<f:selectItem itemLabel="Femme" itemValue="femme"/>
+							</h:selectOneRadio>
+							<h:message for="genre" style="color:red"></h:message>
+							
+							<h:outputLabel value="Email :" />
+							<h:inputText id="email" required="true" value="#{userbean.email}"
+									requiredMessage="L'Email est obligatoire !">
+								<f:validateLength minimum="6" maximum="30" ></f:validateLength>
+							</h:inputText>
+							<h:message for="email" style="color:red"></h:message>
+							
+							<h:outputLabel value="Mot de passe :" />
+							<h:inputSecret id="password" required="true" value="#{userbean.password}"
+									requiredMessage="Le mot de passe est obligatoire !">
+								<f:validateLength minimum="4" maximum="30" ></f:validateLength>
+							</h:inputSecret>
+							<h:message for="password" style="color:red"></h:message>
+							
+							<h:outputLabel value="Qualité de service :" />
+							<h:selectOneMenu id="niveauDeService" value="#{userbean.niveauDeService}"
+									requiredMessage="L'niveau de service  est obligatoire !">
+									<f:selectItem itemLabel="Basic" itemValue="basic"/>
+									<f:selectItem itemLabel="Medium" itemValue="medium"/>
+									<f:selectItem itemLabel="Premium" itemValue="premium"/>
+								<f:validateLength minimum="2" maximum="30" ></f:validateLength>
+							</h:selectOneMenu>
+							<h:message for="niveauDeService" style="color:red"></h:message>
+							
+						</h:panelGrid>
+
+						<p></p>
+						<h:commandButton id="valider" value="Inscription" action="#{userbean.creerCompte()}"/>
+				</h:form>
+				
+				<h:form>
+					<h4> Liste des participants inscites</h4>
+					
+						<h:dataTable value ="#{userbean.usersList}" var="o"
+							styleClass="order-table" headerClass="order-table-header"
+							newClasses="order-table-odd-row,order-table-even-row
+							,order-table-column">
+							
+							<h:column>
+								<!-- column header -->
+								<f:facet name="header">Prénom</f:facet>
+								<!-- row record -->
+								<h:outputText value="#{o.prenom}"></h:outputText>
+							</h:column>
+							
+							<h:column>
+								<!-- column header -->
+								<f:facet name="header">Prénom</f:facet>
+								<!-- row record -->
+								<h:outputText value="#{o.prenom}"/>
+							</h:column>
+							
+							<h:column>
+								<f:facet name="header">Nom</f:facet>
+								<h:outputText value="#{o.nom}"/>
+							</h:column>
+							
+							<h:column>
+								<f:facet name="header">Email</f:facet>
+								<h:outputText value="#{o.email}"/>
+							</h:column>
+							
+							<h:column>
+								<f:facet name="header">Date de Naissance</f:facet>
+								 <h:outputText value="#{o.dateDeNaissance}"> 
+								 	<f:convertDateTime pattern="dd/MM/yyyy" />
+								 </h:outputText>
+			<!-- 					<h:outputText value="#{o.dateDeNaissance.date}/#{o.dateDeNaissance.month}/#{o.dateDeNaissance.year}"/>
+								 -->
+								
+							</h:column>
+							
+							<h:column>
+								<f:facet name="header">Niveau de Service</f:facet>
+								<h:outputText value="#{o.niveauDeService}"/>
+							</h:column>
+							
+							<h:column>
+								<f:facet name="header">Action</f:facet>
+								<h:commandLink value="Supprimer" action="#{userbean.deleteAction(o)}"/>
+							</h:column>
+							
+							<h:column>
+								<f:facet name="header">Action</f:facet>
+								<h:commandButton value="Supprimer" action="#{userbean.deleteAction(o)}"/>
+							</h:column>
+							
+						</h:dataTable>
+				</h:form>
+			</f:view>
+		</ui:define>
+	</ui:composition>
+
+
+
+</body>
+</html>

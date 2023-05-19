@@ -1,6 +1,6 @@
 package fr.doranco.exemple.main.cartePaiement;
 
-import fr.doranco.exemple.model.dao.CarteDao;
+import fr.doranco.exemple.model.dao.CartePaiementDao;
 import fr.doranco.exemple.model.dao.ICartePaiementDao;
 
 public class MainDeleteCarte {
@@ -9,7 +9,7 @@ public class MainDeleteCarte {
 	public static void main(String[] args) {
 		
 		try {
-			final ICartePaiementDao cartePaiementDao = new CarteDao();
+			final ICartePaiementDao cartePaiementDao = new CartePaiementDao();
 
 			int id = 6;
 			System.out.println("Supression d'une carte :");

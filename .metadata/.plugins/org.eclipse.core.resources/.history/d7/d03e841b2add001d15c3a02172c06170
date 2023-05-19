@@ -1,9 +1,0 @@
-package fr.doranco.tp7;
-
-public class Employe {
-
-	public Employe() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

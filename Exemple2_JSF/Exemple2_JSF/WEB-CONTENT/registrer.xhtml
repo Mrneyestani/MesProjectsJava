@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>IDENTIFICATION</title>
+</head>
+<body>
+
+	<ui:composition template="/resources/template/layout.xhtml">
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+						<h3>IDENTIFICATION</h3>
+						<h:panelGrid id="panel" columns="3" cellpadding="2" cellspacing="1">
+
+							<h:outputLabel value="Email :" />
+							<h:inputText id="email" required="true" value="#{userbean.email}"
+									requiredMessage="L'Email est obligatoire !">
+								<f:validateLength minimum="6" maximum="30" ></f:validateLength>
+							</h:inputText>
+							<h:message for="email" style="color:red"></h:message>
+
+							<h:outputLabel value="Mot de Passe :" />
+							<h:inputSecret id="password" required="true" value="#{userbean.password}"
+									requiredMessage="Le mot de passe est obligatoire !">
+								<f:validateLength minimum="8" maximum="30" ></f:validateLength>
+							</h:inputSecret>
+							<h:message for="password" style="color:red"></h:message>
+						</h:panelGrid>
+
+						<p></p>
+						<h:commandButton id="valider" value="Valider" action="#{userbean.seConnecter()}"/>
+				</h:form>
+			</f:view>
+		</ui:define>
+	</ui:composition>
+
+
+
+</body>
+</html>

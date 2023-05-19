@@ -17,7 +17,7 @@ import fr.doranco.exemple.utils.Dates;
 public class UserDao implements IUserDao {
 
 	private final IAdresseDao adresseDao = new AdresseDao();
-	private final ICartePaiementDao cartePaiementDao = new CarteDao();
+	private final ICartePaiementDao cartePaiementDao = new CartePaiementDao();
 	private final ICommandeDao commandeDao = new CommandeDao();
 	
 	@Override

@@ -1,5 +1,6 @@
 package fr.doranco.exemple.utils;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public abstract class Dates {
@@ -14,12 +15,19 @@ public abstract class Dates {
 		return new java.sql.Date(dateUtil.getTime());
 	}
 
-	public static final java.util.Date convertStringToDate(String dateStr) throws Exception {
+	public static final java.util.Date convertStringToDate(String dateStr) {
 		SimpleDateFormat formatter = new SimpleDateFormat(formatDate);
-		return formatter.parse(dateStr);
+		java.util.Date date = null;
+		try {
+			date = formatter.parse(dateStr);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return date;
 	}
 	
-	public static final String convertDateToString(java.sql.Date date) throws Exception {
+	public static final String convertDateToString(java.sql.Date date) {
 		SimpleDateFormat formatter = new SimpleDateFormat(formatDate);
 		return formatter.format(date);
 	}

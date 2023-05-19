@@ -1,9 +1,0 @@
-package fr.doranco.exemple.model.dao;
-
-public class CommandeDao {
-
-	public CommandeDao() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

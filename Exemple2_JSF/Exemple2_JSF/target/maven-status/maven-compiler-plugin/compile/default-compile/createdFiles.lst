@@ -1,0 +1,5 @@
+fr\doranco\jsf\entity\Adresse.class
+fr\doranco\jsf\vue\beans\AdresseBean.class
+fr\doranco\jsf\utils\Dates.class
+fr\doranco\jsf\vue\beans\UserBean.class
+fr\doranco\jsf\entity\User.class

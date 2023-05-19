@@ -1,9 +1,0 @@
-package fr.doranco.tp7;
-
-public class Representant {
-
-	public Representant() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

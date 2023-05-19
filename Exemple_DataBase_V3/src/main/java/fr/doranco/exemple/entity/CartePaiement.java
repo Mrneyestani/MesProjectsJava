@@ -7,15 +7,17 @@ public class CartePaiement {
 	private int id;
 	private String numeroCarte;
 	private Date dateValidite;
-	private int cryptogramme;
+	private String cryptogramme;
+
 	
 	
+
 	public CartePaiement() {
 		
 	}
 
 
-	public CartePaiement(String numeroCarte, Date dateValidite, int cryptogramme) {
+	public CartePaiement(String numeroCarte, Date dateValidite, String cryptogramme) {
 		
 		this.numeroCarte = numeroCarte;
 		this.dateValidite = dateValidite;
@@ -53,12 +55,12 @@ public class CartePaiement {
 	}
 
 
-	public int getCryptogramme() {
+	public String getCryptogramme() {
 		return cryptogramme;
 	}
 
 
-	public void setCryptogramme(int cryptogramme) {
+	public void setCryptogramme(String cryptogramme) {
 		this.cryptogramme = cryptogramme;
 	}
 

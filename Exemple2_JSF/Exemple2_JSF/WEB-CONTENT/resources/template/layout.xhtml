@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
+
+<h:head>
+
+	<title>TP : 3</title>
+	<!-- permet de déclarer une resource qui se trouve dans le dossier css du dossier parent resoureces -->
+	<h:outputStylesheet name="common-style.css" library="css"></h:outputStylesheet>
+	<h:outputStylesheet name="table-style.css" library="css" />
+	
+</h:head>
+
+<h:body>
+	<div id="page">
+		<!-- La div avec le id = header , Represente le header -->
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/resources/template/header.xhtml">
+				</ui:include>
+			</ui:insert>
+		</div>
+
+		<!-- La div avec le id = content , Represente le contenu spésifique a chaque vue -->
+		<div id="content">
+			<ui:insert name="content">
+				<ui:include src="/resources/template/content.xhtml">
+				</ui:include>
+			</ui:insert>
+		</div>
+
+		<!-- La div avec le id = footer , Represente le contenu spésifique au pied de page par défaut -->
+		<div id="footer">
+
+			<ui:insert name="footer">
+				<ui:include src="/resources//template/footer.xhtml">
+					<ui:param name="auteur" value="www.doranco.fr" />
+				</ui:include>
+
+			</ui:insert>
+
+		</div>
+	</div>
+</h:body>
+</html>

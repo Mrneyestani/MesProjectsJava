@@ -3,6 +3,7 @@
 	<section name="wizardPage">
 		<list key="groupId">
 			<item value="fr.doranco"/>
+			<item value="fr.doaranco"/>
 			<item value="WS-SOAP-Server"/>
 			<item value="Project_Hibernate_JSF_MVC"/>
 			<item value="LoginExample"/>
@@ -13,6 +14,11 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="AuthentificationWeb"/>
+			<item value="Authentification"/>
+			<item value="Projet_JasminEcommerce"/>
+			<item value="Algoritm_Security"/>
+			<item value="Securite_DES_Moi"/>
 			<item value="WS-REST-JERSEY-Server"/>
 			<item value="WS-SOAP-Client-Asynchrone_moi"/>
 			<item value="WS-SOAP-Client-Synchrone"/>

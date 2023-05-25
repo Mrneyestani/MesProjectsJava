@@ -22,7 +22,7 @@ public class GetEmployeById {
 		WebTarget target = client.target("http://localhost:9991/rest")
 									.path("employes")
 									.path("id")
-									.path("3");
+									.path("4");
 		
 		Response response = target.request(MediaType.APPLICATION_JSON)
 				.accept(MediaType.APPLICATION_JSON)

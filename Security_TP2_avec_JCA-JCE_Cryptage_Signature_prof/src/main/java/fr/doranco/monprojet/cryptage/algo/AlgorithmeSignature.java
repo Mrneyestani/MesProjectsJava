@@ -25,7 +25,7 @@ public final class AlgorithmeSignature {
 				throw new Exception("La signature ne s'est pas faite correctement !");
 			}
 		case "RSA":
-			throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implémenté !");
+			throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implÃ©mentÃ© !");
 		default:
 			throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas pris en charge !");
 		}

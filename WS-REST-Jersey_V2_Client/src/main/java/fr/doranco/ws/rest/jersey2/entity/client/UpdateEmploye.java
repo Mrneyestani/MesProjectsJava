@@ -24,9 +24,9 @@ public class UpdateEmploye {
 									.path("employes")
 									.path("update");
 		
-		Employe employe = new Employe("CAMUS", "Albert", "Historien");
+		Employe employe = new Employe("CAMI","Alain","Historien");
 		employe.setId(8);
-		employe.setEmail("camus@gmail.com");
+		employe.setEmail("cami@gmail.com");
 		
 		Response response = target.request(MediaType.APPLICATION_JSON + CHARSET)
 				.put(Entity.entity(employe, MediaType.APPLICATION_JSON + CHARSET));

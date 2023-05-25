@@ -20,7 +20,7 @@ public final class AlgorithmeCryptage {
 					cipher.init(Cipher.ENCRYPT_MODE, key);
 					return cipher.doFinal(messageToEncrypt.getBytes("UTF-8"));
 				case "PBE_MD5_DES" :
-					throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implémenté !");
+					throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implÃ©mentÃ© !");
 				default :
 					throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas pris en charge !");
 		}
@@ -37,7 +37,7 @@ public final class AlgorithmeCryptage {
 				byte[] messageDecrypteByte = cipher.doFinal(messageCrypte);
 				return new String(messageDecrypteByte);
 			case "PBE_MD5_DES" :
-				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implémenté !");
+				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas encore implÃ©mentÃ© !");
 			default :
 				throw new NoSuchAlgorithmException("L'algorithme '" + algorithm + "' n'est pas pris en charge !");
 		}

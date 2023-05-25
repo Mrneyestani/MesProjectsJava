@@ -15,7 +15,7 @@ public class UserDao implements IUserDao {
 	public User addUser(User user) throws Exception {
 		
 		if (user == null) {
-			throw new NullPointerException("L'objet user � ajouter dans la BDD ne doit pas être NULL !");
+			throw new NullPointerException("L'objet user à ajouter dans la BDD ne doit pas être NULL !");
 		}
 		if (user.getNom() == null || user.getNom().isEmpty()
 				|| user.getPrenom() == null || user.getPrenom().isEmpty()
@@ -24,7 +24,7 @@ public class UserDao implements IUserDao {
 				|| user.getCleCryptage() == null || user.getCleCryptage().length == 0) {
 
 			throw new IllegalArgumentException(
-					"Un ou plusieurs param�tres du user à ajouter dans la BDD est(sont) manquant(s) !");
+					"Un ou plusieurs paramètres du user à ajouter dans la BDD est(sont) manquant(s) !");
 		}
 
 		String requete = "INSERT INTO user(nom, prenom, email, password, cle_cryptage) VALUES(?,?,?,?,?)";

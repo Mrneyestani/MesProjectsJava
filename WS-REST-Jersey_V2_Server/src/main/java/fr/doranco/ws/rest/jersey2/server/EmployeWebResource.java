@@ -37,7 +37,7 @@ public class EmployeWebResource {
 					.header("Adresse", "Gallieni").build();
 		}
 		Employe employe = new Employe("BLAISE", "Pascal", "Ecrivain");
-		employe.setId(3);
+		employe.setId(id);
 		return Response.ok().entity(employe).build();
 	}
 
@@ -189,7 +189,7 @@ public class EmployeWebResource {
 			//Response.accepted()
 			 
 			return Response.accepted()
-					.header("message", "L'Employé avec l'id " + id + " a été supprimé.")
+					.header("message", "L'Employé avec l'id " + id + " a ete supprimé.")
 					.build();
 			
 		} catch (Exception e) {

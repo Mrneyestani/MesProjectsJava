@@ -2,9 +2,7 @@ package fr.doranco.ws.rest.jersey.client;
 
 import java.util.List;
 
-import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response.Status;
 
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 

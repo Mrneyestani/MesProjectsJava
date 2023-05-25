@@ -15,7 +15,7 @@ public class CartePaiementDao implements ICartePaiementDao {
 	public CartePaiement addCartePaiement(CartePaiement cp) throws Exception {
 		
 		if (cp == null) {
-			throw new NullPointerException("L'objet CartePaiement à ajouter dans la BDD ne doit pas �tre NULL !");
+			throw new NullPointerException("L'objet CartePaiement à ajouter dans la BDD ne doit pas être NULL !");
 		}
 		if (cp.getTitulaire() == null || cp.getTitulaire().isEmpty()
 				|| cp.getNumeroCarte() == null || cp.getNumeroCarte().length == 0
@@ -49,7 +49,7 @@ public class CartePaiementDao implements ICartePaiementDao {
 	public CartePaiement getCartePaiement(Integer idUser) throws Exception {
 		
 		if (idUser == null || idUser <= 0) {
-			throw new NullPointerException("L'id du user doit �tre non NULL et > 0 !");
+			throw new NullPointerException("L'id du user doit être non NULL et > 0 !");
 		}
 		String requete = "SELECT * FROM carte_paiement WHERE user_id = ?";
 		Connection connection = MySqlDS.getInstance().getConnection();
